@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/stylesFM.css">
+    <title>COLOCA TUS APELLIDOS</title>
+</head>
+
+<body>
+    <header>
+        <div class="imagen">
+            <img src="./img/gradu.png" alt="logoDelProyecto">
+            <h2 class="nombre-pagina">MindVerse</h2>
+        </div>
+        
+        <nav>
+            <a href="./index.html" type="_blank" class="links">Inicio</a>
+        </nav>
+   </header>
+    <!--titulo-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="text-align: center;">Formulario "preguntas"</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--Preguntas-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <p><strong>1. Te has sentido comodo con la pagina</strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta1" id="p11"> si</li>
+                        <li><input type="radio" name="pregunta1" id="p12"> no</li>
+                        <li><input type="radio" name="pregunta1" id="p13"> talvez</li>
+                    </ol>
+                    <p><strong>2.Te a servido la informacion de la pagina</strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta2" id="p21"> si</li>
+                        <li><input type="radio" name="pregunta2" id="p23"> no</li>
+                        <li><input type="radio" name="pregunta2" id="p22"> talvez</li>
+                    </ol>
+                    <p><strong>3. Has entendido el orden y funcionalidad de la pagina</strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta3" id="p31"> si</li>
+                        <li><input type="radio" name="pregunta3" id="p33"> no</li>
+                        <li><input type="radio" name="pregunta3" id="p32"> talvez</li>
+                    </ol>
+                    <p><strong>4. te has percatado de errores en la pagina</strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta4" id="p41"> si</li>
+                        <li><input type="radio" name="pregunta4" id="p42"> no</li>
+                     </ol>
+                    <p><strong>5. Has sido victima de algun abuso o mal comentario</strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta5" id="p55"> si</li>
+                        <li><input type="radio" name="pregunta5" id="p51"> no </li>
+                        <li><input type="radio" name="pregunta5" id="p52"> talvez</li>
+                    </ol>
+                    <hr />
+                    <button type="button" class="btn btn-primary" onclick="resultado()">Enviar</button>
+                    <hr />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!--Llamada al script de respuestas-->
+    <script src="respuestas.js"></script>
+</body>
+
+</html>
+
+
+
+Base de datos: mindverse
+Tabla: articulos:
+contenido de la tabla de MySQL "articulos":
+
+id, titulo, contenido, fecha_publicacion    

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion. 🧠</title>
+
+    <style>
+        .estructura {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+
+        .h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3%;
+        }
+    </style>
+</head>
+
+<body>
+   <header>
+        <div class="imagen">
+            <img src="./img/gradu.png" alt="logoDelProyecto">
+            <h2 class="nombre-pagina">MindVerse</h2>
+        </div>
+
+        <nav>
+            <a href="./index.html" type="_blank" class="links">Inicio</a>
+            <a href="./registroS.php" class="links">Usuario</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="h1">Formulario de Artículos</h1>
+        <form id="formularioArticulo" class="estructura">
+            <div>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+            <div>
+                <label for="contenido">Contenido:</label>
+                <textarea id="contenido" name="contenido" required></textarea>
+            </div>
+            <!-- Añadimos el atributo "name" al botón -->
+            <button type="submit" name="submitBtn">Guardar Artículo</button>
+        </form>
+
+        <!-- Agregamos un elemento para mostrar el cooldown -->
+        <div id="cooldown" style="display: none;"></div>
+
+        <h1></h1>
+        <div id="listaArticulos"></div>
+
+        <script>
+            // Función para obtener y mostrar los artículos usando AJAX
+            function obtenerArticulos() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        document.getElementById("listaArticulos").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "informacion.php", true);
+                xhttp.send();
+            }
+
+            // Manejador del evento submit del formulario
+            document.getElementById("formularioArticulo").addEventListener("submit", function(event) {
+                event.preventDefault();
+                var formData = new FormData(this);
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        obtenerArticulos(); // Actualizar la lista de artículos después de guardar uno nuevo
+                        this.reset(); // Limpiar el formulario
+                        document.getElementById("cooldown").innerText = this.responseText;
+                        document.getElementById("cooldown").style.display = "block";
+                        setTimeout(function() {
+                            document.getElementById("cooldown").style.display = "none";
+                        }, 5000); // Mostrar el mensaje de cooldown por 5 segundos
+                    }
+                };
+                xhttp.open("POST", "informacion.php", true);
+                xhttp.send(formData);
+            });
+
+            // Mostrar los artículos al cargar la página
+            obtenerArticulos();
+        </script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
+
+.links {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+    padding-right: 17px;
+}
+
+header {
+    display: flex;
+    height: 70px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'DynaPuff', cursive;
+}
+
+.imagen {
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.imagen img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.variedad {
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DynaPuff', cursive;
+}
+
+.icono-menu {
+    margin: 0px 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.icono-menu img {
+    vertical-align: top;
+    width: 58px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.contenido-menu {
+    background-color: transparent;
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    top: 1;
+    left: 0;
+}
+
+.contenido-menu ul li {
+    color: whitesmoke;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.prendido {
+    transform: translate(-500px);
+}
+
+.opacidad {
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+.link-dos {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+    padding-right: 17px;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+    font-family: 'DynaPuff', cursive;
+}
+
+.subtitulo1 {
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.informacion {
+    padding-top: 0;
+    text-align: center;
+}
+
+.imgInformacion {
+    width: 100px;
+    height: 100px;
+    padding: 7px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.texto1 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contenedor {
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+
+.imagen {
+    text-align: center;
+}
+
+.imagen--left {
+    text-align: left;
+}
+
+.imgProposito {
+    max-width: 80%;
+}
+
+.texto {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+hr {
+    margin-top: 40px;
+}
